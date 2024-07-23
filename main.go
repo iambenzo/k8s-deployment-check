@@ -35,8 +35,8 @@ func watchDeployment(namespace, deploymentName string, client *kubernetes.Client
 			}
 		}
 
-        // if deployment is ready, break the loop
-		if deployment.Status.ReadyReplicas == deployment.Status.Replicas {
+        // if deployment has more than 0 replicas and desired replicas are ready, break the loop
+		if deployment.Status.Replicas > 0 && deployment.Status.ReadyReplicas == deployment.Status.Replicas {
 			break
 		} else {
             // report status of deployment
