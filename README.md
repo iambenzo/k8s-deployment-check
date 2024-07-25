@@ -67,5 +67,5 @@ spec:
         - -deployment=<DEPLOYMENT_TO_WATCH>
         - -namespace=<NAMESPACE_OF_DEPLOYMENT_TO_WATCH>
   containers:
-	- name: ...
+    - name: ...
 ```
