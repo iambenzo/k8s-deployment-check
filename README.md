@@ -60,12 +60,12 @@ spec:
   serviceAccount: deployment-checker
   serviceAccountName: deployment-checker
   initContainers:
-	- name: deployment-check
-	  image: <CONTAINER_REGISTRY>/deployment-check:0.0.1
-	  imagePullPolicy: IfNotPresent
-	  args:
-		- -deployment=<DEPLOYMENT_TO_WATCH>
-		- -namespace=<NAMESPACE_OF_DEPLOYMENT_TO_WATCH>
+    - name: deployment-check
+      image: <CONTAINER_REGISTRY>/deployment-check:0.0.1
+      imagePullPolicy: IfNotPresent
+      args:
+        - -deployment=<DEPLOYMENT_TO_WATCH>
+        - -namespace=<NAMESPACE_OF_DEPLOYMENT_TO_WATCH>
   containers:
 	- name: ...
 ```
