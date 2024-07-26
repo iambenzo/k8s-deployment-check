@@ -6,7 +6,7 @@ WORKDIR /app
 COPY go.mod ./
 COPY go.sum ./
 COPY main.go ./
-COPY vendor/ ./vendor/
+# COPY vendor/ ./vendor/
 
 # build the binary
 RUN CGO_ENABLED=0 GOOS=linux go build -ldflags="-s" -o /kdc
